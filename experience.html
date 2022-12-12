@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700;900&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+	<title>experience</title>
+	<style>
+		body{
+			margin: 0;
+			padding:0;
+			font-family: 'Noto Sans KR', sans-serif,
+			'Apple SD Gothic Neo',
+			sans-serif;
+			color: #424242;
+		}
+
+		.hero-header{
+			height: 800px;
+			min-height: 450px;
+			background-image: linear-gradient(
+				rgba(0,0,0,0.5), rgba(0,0,0,0)), url(https://i.postimg.cc/kMcYjHwq/image.jpg);
+			background-size: cover;
+			background-position: center;
+			background-repeat: no-repeat;
+
+			align-items: center;
+			justify-content: space-between;
+		}
+		.logo{
+			position: absolute;
+			padding: 60px;
+			width: 1440px;
+			margin-left: auto;
+			margin-right: auto;
+			padding-left: 235px;
+		}
+		.menu{
+			width: 1440px;
+			margin-left: auto;
+			margin-right: auto;
+		}
+
+		.info{
+			text-align: left;
+			color: white;
+			padding-top: 180px;
+
+			width: 1440px;
+			margin-left: auto;
+			margin-right: auto;
+		}
+		.info h1{
+			margin-bottom: 20px;
+			line-height: 70px;
+			font-size: 72px;
+			font-weight: 500;
+		}
+		
+
+		.menu ul{
+			margin: 0;
+			padding: 0;
+			list-style: none;
+			display: flex;
+			justify-content: flex-end;
+		}
+		.menu a{ 
+			display: inline-block;
+			padding:0px 25px;
+			font-size: 20px;
+			text-decoration: none;
+			color: white;
+		}
+		.menu-2 a{
+			font-size: 14px;
+			margin: 0;
+			padding-left: 5px;
+			padding-bottom: 15px;
+			padding-top: 30px;
+		}
+		.material-symbols-outlined{
+		font-size: 53px;
+		color: #424242;
+		margin-left: -30px;
+		}
+
+
+		.menu-3{
+			padding: 15px 100px;
+			  margin:10px 4px;
+			  text-transform: uppercase;
+			  text-align: center;
+			  position: relative;
+			  text-decoration: none;
+			  display:inline-block;
+		}
+		.menu-3::before {
+			  content: '';
+			  position: absolute;
+			  bottom: 0%;
+			  left: 10%;
+			  width: 80%;
+			  height: 2px;
+			  background: #6098FF;
+			  display: block;
+			  -webkit-transform-origin: right top;
+			  -ms-transform-origin: right top;
+			  transform-origin: right top;
+			  -webkit-transform: scale(0, 1);
+			  -ms-transform: scale(0, 1);
+			  transform: scale(0, 1);
+			  -webkit-transition: transform 0.4s cubic-bezier(1, 0, 0, 1);
+			  transition: transform 0.4s cubic-bezier(1, 0, 0, 1);
+		}
+
+		.menu-3:hover::before {
+			  -webkit-transform-origin: left top;
+			  -ms-transform-origin: left top;
+			  transform-origin: left top;
+			  -webkit-transform: scale(1, 1);
+			  -ms-transform: scale(1, 1);
+			  transform: scale(1, 1);
+		}
+
+
+		.title{
+			text-align: center;
+			font-size: 40px;
+			font-weight: 900;
+			padding-top: 100px;
+			padding-bottom: 50px;
+		}
+
+		.title-info{
+			text-align: center;
+			font-size: 16px;
+			font-weight: 400;
+			padding-bottom: 125px;
+
+		}
+
+
+		.con1{
+			width: 1440px;
+			margin-left: auto;
+			margin-right: auto;
+			display: flex;
+			flex-flow: row wrap;
+			justify-content: space-evenly;
+		}
+		.box{
+			margin-bottom: 35px;
+		}
+
+		.con1 .box{
+			flex: 0 0 650px;
+			  position: relative;
+			  height: 335px;
+			  overflow: hidden;
+		}
+
+		.con1 h2{
+			 position: absolute;
+			  left: 0;
+			  right: 0;
+			  bottom: -16px;
+			  color: #fff;
+			  background: rgba(0, 0, 0, 0.5);
+			  /*   width: 100%; */
+			  padding: 0;
+			  box-sizing: border-box;
+			  opacity: 0;
+			  transition: all 0.3s ease-in-out;
+
+			    font-size: 20px;
+			  line-height: 335px;
+			  overflow: hidden;
+			  white-space: nowrap;
+			  text-overflow: ellipsis;
+			  color: #fff;
+			  text-align: center;
+
+		}
+		.box:hover h2 {
+		  opacity: 1;
+		  z-index: 100;
+		}
+
+		.box:hover img{
+			transform: scale(1.1);
+		}
+
+		.box img{
+			transition: transform 0.3s ease;
+		}
+
+		footer{
+			margin-top: 150px;
+			height: 200px;
+			background-color: #0E1C2D;
+			color:  #8D8D8D;
+
+		}
+
+		footer .container{
+			padding: 40px 20px;
+
+			width: 1440px;
+			margin-left: auto;
+			margin-right: auto;
+		}
+
+		
+		.footA a{
+			text-decoration: none;
+			color: #8D8D8D;
+		}
+		.footA ul{
+			margin: 0;
+			padding: 0;
+			list-style: none;
+			display: flex;
+			justify-content: flex-end;
+			gap: 40px;
+		}
+		.footB{
+			display: flex;
+			align-items: center;
+		}
+		.footB img{
+			margin-right: 15px;
+		}
+		.footC{
+			text-align: center;
+			font-size: 8px;
+		}
+
+	</style>
+</head>
+<body>
+	<div class="hero-header">
+		<div class="logo">
+			<a href="index.html"><img src="https://i.postimg.cc/dQhtjHD9/image.png"width="182px"></a>
+		</div>
+		<nav class="menu">
+			<ul class="menu-2">
+				<li><a href="#">로그인</a></li>
+				<li><a href="#">회원가입</a></li> 
+			</ul>
+			<ul>
+				<li><a class="menu-3" href="experience.html">체험신청</a></li>
+				<li><a class="menu-3" href="matching.html">팀매칭</a></li>
+				<li><a class="menu-3" href="#">해양스포츠대회</a></li>
+				<li><a class="menu-3" href="safety.html">해양안전자료</a></li>
+				<li><a class="menu-3" href="#">커뮤니티</a></li>
+			</ul>
+		</nav>
+		<div class="info">
+			<h1>EXPERIENCE<br>OCEAN LEISURE<br>SPORTS</h1>
+		</div>
+	</div>
+
+	<div class="title">예약하기</div>
+	<div class="title-info">
+		아래 장소를 선택하여 예약을 진행합니다. 달력에서 잔여인원을 확인 후 체험일과 시간을 선택해주세요.<br>예약하는 분의 기본정보 입력하면 예약이 완료 되며, <b>3일 전 환불시 50%환불가능, 전 날은 환불이 불가합니다.</b><br>예약확인 및 취소를 원하실 경우 <b>“예약확인 취소” 메뉴</b>에서 가능합니다.
+	</div>
+	<div class="con1">
+		<a class="box" href="reservation.html">
+		<h2>강원 강릉향호호수</h2>
+		<img src="https://i.postimg.cc/FK31Bd62/1.jpg" width="650px">
+		</a>
+		<a class="box" href="reservation.html">
+		<h2>경북 상주 상주보수상레저센터</h2>
+		<img src="https://i.postimg.cc/T3fDF09x/2.jpg" width="650px">
+		</a>
+		<a class="box" href="reservation.html">
+		<h2>경북 상주 낙단보수상레저센터</h2>
+		<img src="https://i.postimg.cc/MTCcDmTh/3.jpg" width="650px">
+		</a>
+		<a class="box" href="reservation.html">
+		<h2>양양 수산항</h2>
+		<img src="https://i.postimg.cc/G2fXcVp6/4.jpg" width="650px">
+		</a>
+		<a class="box" href="reservation.html">
+		<h2>구미시낙동강 수상레포츠 체험센터</h2>
+		<img src="https://i.postimg.cc/0y9FHgKC/5.jpg" width="650px">
+		</a>
+		<a class="box" href="reservation.html">
+		<h2>경북 율정호</h2>
+		<img src="https://i.postimg.cc/s2NLXv6n/6.jpg" width="650px">
+		</a>
+		<a class="box" href="reservation.html">
+		<h2>증평군 블랙스톤벨포레리조트 마리나클럽</h2>
+		<img src="https://i.postimg.cc/PJGFW0kY/7.jpg" width="650px">
+		</a>
+		<a class="box" href="reservation.html">
+		<h2>코리아둘레길</h2>
+		<img src="https://i.postimg.cc/yYHbkqjz/8.jpg" width="650px">
+		</a>
+	</div>
+
+	<footer>
+		<div class="container">
+			<nav class="footA">
+				<ul>
+					<li id="footA-li"><a href="#">회사정보</a></li>
+					<li id="footA-li"><a href="#">개인정보처리방침</a></li>
+					<li id="footA-li"><a href="#">공지사항</a></li>
+					<li id="footA-li"><a href="#">사이트맵</a></li>
+				</ul>
+			</nav>
+			<nav class="footB">
+				<img src="https://i.postimg.cc/dQhtjHD9/image.png"width="118px"><h5>(08801) 서울특별시 관악구 남부순환로 1935, 7층 한국해양소년단연맹
+					<br>oleports@naver.com T. 1577-2281</h5>
+			</nav>
+			<nav class="footC">
+				COPYRIGHT (C) 사단법인 한국해양소년단연맹. 2018 ALL RIGHTS RESERVED.
+			</nav>
+		</div>
+	</footer>
+	<script type="text/javascript">
+(function(w, d, a){
+    w.__beusablerumclient__ = {
+        load : function(src){
+            var b = d.createElement("script");
+            b.src = src; b.async=true; b.type = "text/javascript";
+            d.getElementsByTagName("head")[0].appendChild(b);
+        }
+    };w.__beusablerumclient__.load(a + "?url=" + encodeURIComponent(d.URL));
+})(window, document, "//rum.beusable.net/load/b221213e013507u640");
+</script>
+</body>
+</html>

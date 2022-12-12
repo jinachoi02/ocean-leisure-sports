@@ -1,0 +1,555 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700;900&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+	<title>matching</title>
+	<style>
+		body{
+			margin: 0;
+			padding:0;
+			font-family: 'Noto Sans KR', sans-serif,
+			'Apple SD Gothic Neo',
+			sans-serif;
+			color: #424242;
+
+		}
+		.hero-header{
+			height: 800px;
+			min-height: 450px;
+			background-image: linear-gradient(
+				rgba(0,0,0,0.5), rgba(0,0,0,0)), url(https://images.unsplash.com/photo-1620903669944-de50fbe78210?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80);
+			background-size: cover;
+			background-position: center;
+			background-repeat: no-repeat;
+
+			align-items: center;
+			justify-content: space-between;
+
+
+		}
+		.logo{
+			position: absolute;
+			padding: 60px;
+			width: 1440px;
+			margin-left: auto;
+			margin-right: auto;
+
+			padding-left: 235px;
+		}
+		.menu{
+			width: 1440px;
+			margin-left: auto;
+			margin-right: auto;
+		}
+
+		.info{
+			text-align: left;
+			color: white;
+			padding-top: 180px;
+			
+
+			width: 1440px;
+			margin-left: auto;
+			margin-right: auto;
+		}
+		.info h1{
+			margin-bottom: 20px;
+			line-height: 70px;
+			font-size: 72px;
+			font-weight: 500;
+		}
+		.info p{
+			margin-top: 0;
+			margin-bottom: 0;
+			font-weight: 400;
+			font-size: 24px;
+		}
+
+		.menu ul{
+			margin: 0;
+			padding: 0;
+			list-style: none;
+			display: flex;
+			justify-content: flex-end;
+		}
+		.menu a{ 
+			display: inline-block;
+			padding:0px 25px;
+			font-size: 20px;
+			text-decoration: none;
+			color: white;
+		}
+		.menu-2 a{
+			font-size: 14px;
+			margin: 0;
+			padding-left: 5px;
+			padding-bottom: 15px;
+			padding-top: 30px;
+		}
+		.material-symbols-outlined{
+		font-size: 53px;
+		color: #424242;
+		margin-left: -30px;
+		}
+
+		.menu-3{
+			padding: 15px 100px;
+			  margin:10px 4px;
+			  text-transform: uppercase;
+			  text-align: center;
+			  position: relative;
+			  text-decoration: none;
+			  display:inline-block;
+		}
+		.menu-3::before {
+			  content: '';
+			  position: absolute;
+			  bottom: 0%;
+			  left: 10%;
+			  width: 80%;
+			  height: 2px;
+			  background: #6098FF;
+			  display: block;
+			  -webkit-transform-origin: right top;
+			  -ms-transform-origin: right top;
+			  transform-origin: right top;
+			  -webkit-transform: scale(0, 1);
+			  -ms-transform: scale(0, 1);
+			  transform: scale(0, 1);
+			  -webkit-transition: transform 0.4s cubic-bezier(1, 0, 0, 1);
+			  transition: transform 0.4s cubic-bezier(1, 0, 0, 1);
+		}
+
+		.menu-3:hover::before {
+			  -webkit-transform-origin: left top;
+			  -ms-transform-origin: left top;
+			  transform-origin: left top;
+			  -webkit-transform: scale(1, 1);
+			  -ms-transform: scale(1, 1);
+			  transform: scale(1, 1);
+		}
+
+
+
+		.con1{
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			gap: 55px;
+			padding-top: 50px;
+		}
+		.icon{
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		}
+		.icon:hover{
+			color: #6098FF;
+			transition: all 0.3s cubic-bezier(0.77, 0, 0.175, 1);
+		}
+
+		.con1 a{
+			color: #424242;
+			text-decoration: none;
+		}
+		.icon .icon-text{
+			margin-left: 12px;
+		}
+		.icon h2{
+			font-size: 16px;
+			margin: 0;
+			padding: 0;
+
+		}
+		.icon h3{
+			font-size: 14px;
+			margin: 0;
+			padding: 0;
+		}
+		
+		.speed-matching-img{
+			width: 700px;
+
+		}
+
+		.title{
+			text-align: center;
+			color: #424242;
+			font-size: 40px;
+			font-weight: 900;
+			padding-top: 100px;
+			padding-bottom: 56px;
+		}
+
+		.con2{
+			width: 1440px;
+			margin-left: auto;
+			margin-right: auto;
+			display: flex;
+			flex-flow: row wrap;
+			justify-content: space-between
+
+		}
+
+		.speed-matching{
+			flex: 0 0 700px;
+			position: relative;
+			height: 405px;
+			overflow: hidden;
+		}
+		.speed-matching-hiddentext {
+			position: absolute;
+			  left: 0;
+			  right: 0;
+			  bottom: -16px;
+			  color: #fff;
+			  background: rgba(0, 0, 0, 0.5);
+			  /*   width: 100%; */
+			  padding: 0;
+			  box-sizing: border-box;
+			  opacity: 0;
+			  transition: all 0.3s ease-in-out;
+
+			    
+		}
+		.speed-matching-hiddentext{
+			font-size: 16px;
+			  line-height: auto;
+			  padding-top: 190px;
+			  padding-bottom: 110px;
+			  overflow: hidden;
+			  white-space: nowrap;
+			  text-overflow: ellipsis;
+			  color: #fff;
+			  text-align: center;
+			  font-weight: 400;
+		}
+		.speed-matching-hiddentext h4{
+			font-size: 20px;
+			font-weight: 700;
+		}
+
+		.speed-matching:hover .speed-matching-hiddentext {
+  			opacity: 1;
+  			z-index: 100;
+  		}
+
+  		.title-info{
+			text-align: center;
+			font-size: 16px;
+			font-weight: 500;
+			padding-bottom: 125px;
+			margin-top: -47px;
+
+		}
+
+		.plus{
+			width: 1440px;
+			margin-left: auto;
+			margin-right: auto;
+			margin-bottom: 46px;
+			text-align: right;
+		}
+
+
+		.con3{
+			width: 1440px;
+			margin-left: auto;
+			margin-right: auto;
+			display: flex;
+			justify-content: space-between;
+			margin-bottom: 40px;
+			flex-flow: row wrap;
+
+		}
+
+		.test{
+			width:380px;
+			height: 40px;
+			border-top:solid 1px #333;
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+		}
+		.box{
+			
+			padding: 26px;
+			margin-bottom: 40px;
+
+		}
+		.box-in {
+			display: flex;
+			align-items: center;
+/*		    background-color: dodgerblue;
+		    width: 127px;*/
+		}
+		.box-in2 {
+			display: flex;
+			align-items: center;
+/*			background-color: yellow;
+			width: 120px;*/
+			margin-left: auto;
+			gap: 10px;
+		}
+		.material-symbols-outlined01{
+			width: 30px;
+			height: 30px;
+			font-size: 30px;
+			border:1px solid red;
+			display: inline-block;
+			margin-right: 0px;
+		}
+		.test h5 {
+			display: flex;
+			align-items: center;
+
+		}
+		.con3 a{
+			text-decoration: none;
+			color: #424242;
+		}
+
+		.box{
+			box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+  			transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+		}
+
+		.box:hover{
+			box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+		}
+
+				footer{
+			margin-top: 150px;
+			height: 200px;
+			background-color: #0E1C2D;
+			color:  #8D8D8D;
+
+		}
+
+		footer .container{
+			padding: 40px 20px;
+
+			width: 1440px;
+			margin-left: auto;
+			margin-right: auto;
+		}
+
+		
+		.footA a{
+			text-decoration: none;
+			color: #8D8D8D;
+		}
+		.footA ul{
+			margin: 0;
+			padding: 0;
+			list-style: none;
+			display: flex;
+			justify-content: flex-end;
+			gap: 40px;
+		}
+		.footB{
+			display: flex;
+			align-items: center;
+		}
+		.footB img{
+			margin-right: 15px;
+		}
+		.footC{
+			text-align: center;
+			font-size: 8px;
+		}
+
+
+	</style>
+</head>
+<body>
+	<div class="hero-header">
+		<div class="logo">
+			<a href="index.html"><img src="https://i.postimg.cc/dQhtjHD9/image.png"width="182px"></a>
+		</div>
+		<nav class="menu">
+			<ul class="menu-2">
+				<li><a href="#">로그인</a></li>
+				<li><a href="#">회원가입</a></li> 
+			</ul>
+			<ul>
+				<li><a class="menu-3" href="experience.html">체험신청</a></li>
+				<li><a class="menu-3" href="matching.html">팀매칭</a></li>
+				<li><a class="menu-3" href="#">해양스포츠대회</a></li>
+				<li><a class="menu-3" href="safety.html">해양안전자료</a></li>
+				<li><a class="menu-3" href="#">커뮤니티</a></li>
+			</ul>
+		</nav>
+		<div class="info">
+			<h1>TEAM<br>MATCHING</h1>
+		</div>
+	</div>
+
+	<div class="title">빠른 팀 매칭</div>
+	<div class="con2" >
+		<a class="speed-matching" href="팀매칭.html">
+			<div class="speed-matching-hiddentext"><h4>팀장이신가요?</h4><br>팀장으로 선택하기<br>(종목과 관련해서 자격증은 필수입니다.)</div>
+			<img class="speed-matching-img" src="https://i.postimg.cc/4xwjdZ0T/image.jpg" height="405px">
+			
+		</a>
+		<a class="speed-matching" href="팀매칭.html">
+			<div class="speed-matching-hiddentext"><h4>팀원이신가요?</h4><br><br>팀원으로 선택하기</div>
+			<img class="speed-matching-img" src="https://i.postimg.cc/pLV134Lc/image.jpg" height="405px">
+		</a>
+	</div>
+		<div class="title">일반 매칭</div>
+		<div class="title-info">
+		인원 수 및 정보를 알아볼 수 있습니다.
+	</div>
+
+	<div class="plus"><a href="#"><img src="https://i.postimg.cc/kgKMh82W/add-box-FILL0-wght400-GRAD0-opsz48.png" width="45px"></a></div>
+
+	<div class="con3">
+		<a href="#">
+		<div class="box">
+			<img src="https://i.postimg.cc/cHjD135T/1.jpg" width="402px" height="250px">
+			<p>함께 바다 서핑할 분 구합니다.
+			<br>국제서핑협회 ISA자격증 보유
+			<br>강원도 양양 죽도해수욕장</p>
+			<br><br><br>
+			<div class="test">
+				<div class="box-in">
+					<h5><img src="https://i.postimg.cc/VLCjdCpN/account-circle-FILL0-wght400-GRAD0-opsz48.png" width="30px">서핑핑핑</h5>
+				</div>
+ 				<div class="box-in2">
+					<h5><img src="https://i.postimg.cc/d10JxGrm/favorite-FILL0-wght400-GRAD0-opsz48.png" width="30px">12</h5>
+					<h5><img src="https://i.postimg.cc/y8YBdFrq/forum-FILL0-wght400-GRAD0-opsz48.png" width="30px">6</h5>
+				</div>
+			</div>
+		</div>
+		</a>
+		<a href="#">
+		<div class="box">
+			<img src="https://i.postimg.cc/tJP4SZgD/1.jpg" width="402px" height="250px">
+			<p>(주)거제해양스포츠에 준비한 프로그램
+			<br>스탠드업 패들보드 구비되어있습니다.
+			<br>일운면 구조라해변길 21</p>
+			<br><br><br>
+			<div class="test">
+				<div class="box-in">
+					<h5><img src="https://i.postimg.cc/VLCjdCpN/account-circle-FILL0-wght400-GRAD0-opsz48.png" width="30px">서핑핑핑</h5>
+				</div>
+ 				<div class="box-in2">
+					<h5><img src="https://i.postimg.cc/d10JxGrm/favorite-FILL0-wght400-GRAD0-opsz48.png" width="30px">12</h5>
+					<h5><img src="https://i.postimg.cc/y8YBdFrq/forum-FILL0-wght400-GRAD0-opsz48.png" width="30px">6</h5>
+				</div>
+			</div>
+		</div>
+		</a>
+		<a href="#">
+		<div class="box">
+			<img src="https://i.postimg.cc/9fmgLC7P/3.jpg" width="402px" height="250px">
+			<p>함께 바다 카약할 분 구합니다.
+			<br>국제서핑협회 ISA자격증 보유
+			<br>경북 상주 상주보수상레저센터</p>
+			<br><br><br>
+			<div class="test">
+				<div class="box-in">
+					<h5><img src="https://i.postimg.cc/VLCjdCpN/account-circle-FILL0-wght400-GRAD0-opsz48.png" width="30px">서핑핑핑</h5>
+				</div>
+ 				<div class="box-in2">
+					<h5><img src="https://i.postimg.cc/d10JxGrm/favorite-FILL0-wght400-GRAD0-opsz48.png" width="30px">12</h5>
+					<h5><img src="https://i.postimg.cc/y8YBdFrq/forum-FILL0-wght400-GRAD0-opsz48.png" width="30px">6</h5>
+				</div>
+			</div>
+		</div>
+		</a>
+		</a>
+		<a href="#">
+		<div class="box">
+			<img src="https://i.postimg.cc/cLM57rr4/4.jpg" width="402px" height="250px">
+			<p>카약초보자들 환영합니다.
+			<br>장비 대여해드립니다.
+			<br>증평군 블랙스톤벨포레리조트 마리나클럽</p>
+			<br><br><br>
+			<div class="test">
+				<div class="box-in">
+					<h5><img src="https://i.postimg.cc/VLCjdCpN/account-circle-FILL0-wght400-GRAD0-opsz48.png" width="30px">서핑핑핑</h5>
+				</div>
+ 				<div class="box-in2">
+					<h5><img src="https://i.postimg.cc/d10JxGrm/favorite-FILL0-wght400-GRAD0-opsz48.png" width="30px">12</h5>
+					<h5><img src="https://i.postimg.cc/y8YBdFrq/forum-FILL0-wght400-GRAD0-opsz48.png" width="30px">6</h5>
+				</div>
+			</div>
+		</div>
+		</a>
+		</a>
+		<a href="#">
+		<div class="box">
+			<img src="https://i.postimg.cc/BnGV1xZV/6.jpg" width="402px" height="250px">
+			<p>함께 요트타요.
+			<br>요트 대여비 있습니다.
+			<br>강원도 양양 죽도해수욕장</p>
+			<br><br><br>
+			<div class="test">
+				<div class="box-in">
+					<h5><img src="https://i.postimg.cc/VLCjdCpN/account-circle-FILL0-wght400-GRAD0-opsz48.png" width="30px">서핑핑핑</h5>
+				</div>
+ 				<div class="box-in2">
+					<h5><img src="https://i.postimg.cc/d10JxGrm/favorite-FILL0-wght400-GRAD0-opsz48.png" width="30px">12</h5>
+					<h5><img src="https://i.postimg.cc/y8YBdFrq/forum-FILL0-wght400-GRAD0-opsz48.png" width="30px">6</h5>
+				</div>
+			</div>
+		</div>
+		</a>
+		</a>
+		<a href="#">
+		<div class="box">
+			<img src="https://i.postimg.cc/8k93N22D/7.jpg" width="402px" height="250px">
+			<p>1:1 서핑 강습해드립니다.
+			<br>국제서핑협회 ISA자격증 보유
+			<br>경북 율정호</p>
+			<br><br><br>
+			<div class="test">
+				<div class="box-in">
+					<h5><img src="https://i.postimg.cc/VLCjdCpN/account-circle-FILL0-wght400-GRAD0-opsz48.png" width="30px">서핑핑핑</h5>
+				</div>
+ 				<div class="box-in2">
+					<h5><img src="https://i.postimg.cc/d10JxGrm/favorite-FILL0-wght400-GRAD0-opsz48.png" width="30px">12</h5>
+					<h5><img src="https://i.postimg.cc/y8YBdFrq/forum-FILL0-wght400-GRAD0-opsz48.png" width="30px">6</h5>
+				</div>
+			</div>
+		</div>
+		</a>
+	</div>
+
+		<footer>
+		<div class="container">
+			<nav class="footA">
+				<ul>
+					<li id="footA-li"><a href="#">회사정보</a></li>
+					<li id="footA-li"><a href="#">개인정보처리방침</a></li>
+					<li id="footA-li"><a href="#">공지사항</a></li>
+					<li id="footA-li"><a href="#">사이트맵</a></li>
+				</ul>
+			</nav>
+			<nav class="footB">
+				<img src="https://i.postimg.cc/dQhtjHD9/image.png"width="118px"><h5>(08801) 서울특별시 관악구 남부순환로 1935, 7층 한국해양소년단연맹
+					<br>oleports@naver.com T. 1577-2281</h5>
+			</nav>
+			<nav class="footC">
+				COPYRIGHT (C) 사단법인 한국해양소년단연맹. 2018 ALL RIGHTS RESERVED.
+			</nav>
+		</div>
+	</footer>
+	<script type="text/javascript">
+(function(w, d, a){
+    w.__beusablerumclient__ = {
+        load : function(src){
+            var b = d.createElement("script");
+            b.src = src; b.async=true; b.type = "text/javascript";
+            d.getElementsByTagName("head")[0].appendChild(b);
+        }
+    };w.__beusablerumclient__.load(a + "?url=" + encodeURIComponent(d.URL));
+})(window, document, "//rum.beusable.net/load/b221213e013507u640");
+</script>
+</body>
+</html>
